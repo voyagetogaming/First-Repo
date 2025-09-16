@@ -1,20 +1,25 @@
-function createUserRoutes(app){
-        app.post("/users/signup", function(req,res){
-            res.json({
-                msg:"bhaaoi"
-            })
-        })
-        app.post("/users/signin", function(req,res){
-            res.json({
-                msg:"bhaaoi"
-            })
-        })
-        app.get("/users/purchases", function(req,res){
-            res.json({
-                msg:"bhaaoi"
-            })
-        })
-}
+const { Router } = require("express");
+const userRouter = Router();
+
+userRouter.post("/signup", function(req, res) {
+  res.json({
+    msg: "bhaaoi"
+  });
+});
+
+userRouter.post("/signin", function(req, res) {
+  res.json({
+    msg: "bhaaoi"
+  });
+});
+
+userRouter.get("/purchases", function(req, res) {
+  res.json({
+    msg: "bhaaoi"
+  });
+});
+
+// Fixed export: Use 'userRouter' to match the destructuring in index.js
 module.exports = {
-        createUserRoutes: createUserRoutes
-}
+  userRouter: userRouter  // Or simply: userRouter (shorthand)
+};

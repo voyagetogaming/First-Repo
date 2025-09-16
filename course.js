@@ -1,15 +1,19 @@
-function createCourseRoutes(app){
-    app.post("/course/purchase", function (req,res){
-        res.json({
-            msg:"krishna"
-        })
-    })
-    app.get("/course/preview", function (req,res){
-        res.json({
-            msg:"bhai"
-        })
-    })
-}
+const { Router } = require("express");
+const courseRouter = Router();
+
+courseRouter.post("/purchase", function(req, res) {
+  res.json({
+    msg: "signup endpoint "
+  });
+});
+
+courseRouter.get("/preview", function(req, res) {
+  res.json({
+    msg: "signup endpoint "
+  });
+});
+
+// Export is already correct
 module.exports = {
-    createCourseRoutes: createCourseRoutes
-}
+  courseRouter: courseRouter  // Or simply: courseRouter (shorthand)
+};
